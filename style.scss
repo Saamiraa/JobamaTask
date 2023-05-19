@@ -18,8 +18,8 @@ $light-color: #EAE6E6;
 $darkBlue-color: #20307E;
 $black-color: #000103;
 $btn-color: #683EAA;
-$body-color: #FAF9FD;
-
+$search-color: #FAF9FD;
+$body-color: #FFFFFF;
 
 
 
@@ -80,7 +80,7 @@ p{
         padding: 25px 0;
         display: flex;
         align-items: center;
-        background-color: #FFFFFF;
+        background-color: $search-color;
         .header-bottom__logo {
             display: flex;
             align-items: center;
@@ -102,6 +102,7 @@ p{
         height: 70px;
         align-items: center;
         border-radius: 5px;
+        background-color: $search-color;
 
         .header-bottom__searchBar-Sections {
             display: flex;
@@ -120,7 +121,8 @@ p{
                 font-weight: 400;
                 border-radius: 5px;
                 transition: all .24s ease-in-out;
-                border: none    
+                border: none;
+                background-color: $search-color; 
             }
             input:focus{
                 outline: none;
@@ -146,6 +148,7 @@ p{
                 border-radius: 5px;
                 transition: all .24s ease-in-out;
                 border: none;
+                background-color: $search-color;
             }
             input:focus{
                 outline: none;
@@ -171,6 +174,33 @@ p{
         }
     }
 }
+
+
+
+
+
+// banner
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    .banner-img{
+        img{
+            width: 400px;
+        }
+    }
+    .banner-text{
+        margin-left: 40px;
+        h1{
+            color: $black-color;
+            font-size: 56px;
+            line-height: 70px;
+            font-weight: 500;
+        }
+    }
+}
+
 
 
 
