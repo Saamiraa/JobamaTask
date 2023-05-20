@@ -17,7 +17,7 @@ $extra-bold-font-family:"bold";
 $light-color: #EAE6E6;
 $darkBlue-color: #20307E;
 $black-color: #000103;
-$btn-color: #683EAA;
+$btn-color: #89629b;
 $search-color: #FAF9FD;
 $body-color: #FFFFFF;
 
@@ -185,6 +185,9 @@ p{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+
     .banner-img{
         img{
             width: 400px;
@@ -202,6 +205,94 @@ p{
 }
 
 
+// container
+.container{
+    margin-top: 30px;
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+    background-color: $search-color;
+    position: relative;
+
+    .container-Card{
+        border: 1px solid #000;
+        position: relative;
+        margin: 30px;
+        line-height: 28px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+
+
+        .container-Card__logo{
+            position: absolute;
+            left: 23px;
+            top: -18px;
+            left: 20px;
+
+            img{
+                width: 30px;
+                border-radius: 5px;
+            }
+        }
+        .container-Card__header{
+            padding-top: 40px;
+            display: flex;
+            .ontainer-Card__header-time{
+            }
+            .container-Card__header-stats{
+                padding-left: 10px;
+            }
+        }
+        .container-Card__title{
+            span{
+                font-weight: bold;
+            }
+
+        }
+        .container-Card__ComanyName{
+
+        }
+        .container-Card__location{
+            padding-top: 30px;
+        }
+        .container-Card__apply{
+            padding: 10px 0;
+            button{
+                width: 200px;
+                height: 40px;
+                background-color: $btn-color;
+                border: none;
+                border-radius: 10px;
+                &:hover{
+                    background-color: #4b1066;
+                    color: $light-color;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .containe-loadMoreBtn{
+        position: absolute;
+        left: 45%;
+        bottom: 0;
+        margin-bottom: 40px;
+        button{
+            width: 200px;
+            height: 40px;
+            background-color: #8FBC8F;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
 
 
 
