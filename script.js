@@ -1,38 +1,62 @@
+const form = document.querySelector('form')
+const titleInput = document.querySelector(".titleInput")
+const locationInput = document.querySelector(".locationInput")
 const container = document.querySelector(".container")
-const searchTitle = document.querySelector(".header-bottom__searchBar-form-title input")
-const searchLocation = document.querySelector(".header-bottom__searchBar-form-location input")
+const data = {};
+let queryString = null;
+let mainUrl = "https://jabama-devjobs-api.vercel.app/api/v1/jobs"
+
+function checkQuery(x) {
+    if(x) {
+        return `${mainUrl}?${queryString}`
+    }
+    else{
+        return mainUrl
+    }
+}
 
 
 document.addEventListener("DOMContentLoaded", showitems)
 
-searchTitle.addEventListener("input", searchJobs)
 
-// searchTitle.addEventListener("input", e => {
-//     const value = e.target.value
-//     console.log(value)
-// })
-
-// searchLocation.addEventListener("input", e => {
-//     const value = e.target.value
-//     console.log(value)
-// })
-
-
-function showitems() {
-    const xhr = new XMLHttpRequest()
-    xhr.open('GET', 'data.json', true)
-
-    xhr.onload = function() {
-        if(xhr.status == 200) {
-            const response = JSON.parse(xhr.response);
-            response.result.items.forEach(user => {
-                createUser(user)
-                // console.log(user)
-            });
-        }
-    }
-    xhr.send()
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+        for (const [key, value] of formData.entries()) {
+    data[key] = value;
 }
+Object.keys(data).map(key =>{
+    if(data[key]) {
+        return
+    }
+    else {
+        delete data[key]
+    }
+});
+queryString = new URLSearchParams(data).toString();
+
+
+if(Object.keys(data).length === 0){
+    return window.history.pushState({ data }, '', '/');
+
+}else{
+    return window.history.pushState({ data }, '', `?${queryString}`);
+
+}
+
+showitems()
+})
+
+
+async function showitems() {
+    const response = await fetch(checkQuery(queryString));
+    const jsonData = await response.json();
+    jsonData.result.items.forEach(user => {
+        return createUser(user)
+    })
+    console.log(jsonData);
+}
+
 
 function createUser(user) {
     const containerCard = document.createElement("div");
@@ -60,13 +84,4 @@ function createUser(user) {
     `
     container.appendChild(containerCard)
 }
-
-
-
-// async function searchJobs() {
-//     const result = await fetch('data.json')
-//     const data = await result.json();
-//     const jobresult = data.result.items.filter(job => job.position.toLowerCase().includes(searchTitle.value))
-//     createUser(jobresult)
-// }
 
