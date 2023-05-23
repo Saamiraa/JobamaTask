@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+          Div2 starts <br /><br /><br /><br /><br /><br /><br /> Div2 ends
+        </div>
+        <div class="div3">
+          Div3
+        </div>
+      </div> 
+      <style>
+        .div1 {
+  width: 300px;
+  height: auto;
+  background-color: grey;
+  border: 1px solid;
+  overflow: auto;
+}
+
+.div2 {
+  width: 150px;
+  height: auto;
+  background-color: #F4A460;
+  float: left;
+}
+
+.div3 {
+  width: 150px;
+  height: auto;
+  background-color: #FFFFE0;
+  float: right;
+}
+      </style>
+      <script>
+        function adjustHeight() {
+    document.getElementById('div3').style.height = document.defaultView.getComputedStyle(document.getElementById('div1'), "").getPropertyValue("height");
+}
+      </script>
+</body>
+</html>

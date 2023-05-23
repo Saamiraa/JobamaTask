@@ -21,6 +21,8 @@ $btn-color: #febd69;
 $search-color: #232f3e;
 $body-color: #FFFFFF;
 $card-color: #f2f2f2;
+$loadmoreBtn : #8FBC8F;
+$loadmoreBtndark :#186918 ;
 
 
 
@@ -209,17 +211,25 @@ p{
 
 // container
 .container{
-    margin-top: 30px;
     width: 90%;
-    border: 1px solid black;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    column-gap: 50px;
-    row-gap: 50px;
     background-color: $search-color;
     position: relative;
+    margin: 0 auto;
+    max-height: auto;
+
+
+    .containerBox{
+        width: 80%;
+        max-height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+        background-color: $search-color;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
 
     .container-Card{
         // border: 1px solid #000;
@@ -240,7 +250,7 @@ p{
 
             img{
                 width: 50px;
-                height: 43px;
+                min-height: auto;
                 border-radius: 5px;
                 background-color: black;
             }
@@ -269,7 +279,7 @@ p{
         .container-Card__apply{
             padding: 10px 0;
             button{
-                width: 200px;
+                width: 140px;
                 height: 40px;
                 background-color: $btn-color;
                 border: none;
@@ -288,14 +298,21 @@ p{
     .containe-loadMoreBtn{
         position: absolute;
         left: 45%;
-        bottom: 0;
-        margin-bottom: 40px;
+        bottom: -63px;
         button{
             width: 200px;
             height: 40px;
-            background-color: #8FBC8F;
+            background-color: $loadmoreBtn;
             border: none;
             border-radius: 10px;
+            &:hover{
+                background-color: $loadmoreBtndark;
+                color: $light-color;
+                cursor: pointer;
+                transition: all 0.5s;
+                font-size: 15px;
+                font-weight: bold;
+            }
         }
     }
 }
