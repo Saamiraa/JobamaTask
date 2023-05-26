@@ -223,8 +223,7 @@ p{
         position: relative;
         margin: 30px;
         line-height: 28px;
-        padding-left: 20px;
-        padding-bottom: 30px;
+        padding-bottom: 63px;
         background-color: $card-color;
         border-radius: 5px;
 
@@ -244,6 +243,7 @@ p{
         }
         .container-Card__header{
             padding-top: 40px;
+            padding-left: 10px;
             display: flex;
             .ontainer-Card__header-time{
             }
@@ -254,27 +254,35 @@ p{
         .container-Card__title{
             span{
                 font-weight: bold;
+                padding-left: 10px;
             }
 
         }
         .container-Card__ComanyName{
-
+            padding-left: 10px;
         }
         .container-Card__location{
             padding-bottom: 10px;
+            padding-left: 10px;
 
         }
         .container-Card__apply{
             padding-bottom: 20px;
+            width: 90%;
+            height: 40px;
+            background-color: #febd69;
+            border: none;
+            border-radius: 10px;
+            position: absolute;
+            margin: 0 10px;
+
             button{
-                width: 140px;
+                width: 100%;
                 height: 40px;
-                background-color: $btn-color;
+                background-color: #febd69;
                 border: none;
                 border-radius: 10px;
-                position: absolute;
-                left: 36px;
-                bottom: 13px;
+
                 &:hover{
                     background-color: $btn-darkcolor;
                     color: $light-color;
@@ -550,8 +558,7 @@ p{
         .container-Card{
             position: relative;
             line-height: 28px;
-            padding-left: 20px;
-            padding-bottom: 30px;
+            padding-bottom: 45px;
             background-color: $body-color;
             border-radius: 5px;
         }
@@ -573,7 +580,7 @@ p{
             .container-Card__header{
                 padding-top: 40px;
                 display: flex;
-                .ontainer-Card__header-time{
+                .container-Card__header-time{
                 }
                 .container-Card__header-stats{
                     padding-left: 10px;
@@ -582,6 +589,9 @@ p{
             .container-Card__title{
                 span{
                     font-weight: bold;
+                    padding-left: 10px;
+                    display: block;
+
                 }
     
             }
@@ -594,16 +604,21 @@ p{
             }
             .container-Card__apply{
                 padding-bottom: 20px;
+                width: 90%;
+                height: 40px;
+                background-color: #febd69;
+                border: none;
+                border-radius: 10px;
+                position: absolute;
+                margin: 0 10px;
                 button{
-                    width: 81px;
-                    height: 34px;
-                    background-color: $btn-color;
+                    width: 100%;
+                    height: 40px;
+                    background-color: #febd69;
                     border: none;
                     border-radius: 10px;
-                    position: absolute;
-                    left: 47px;
-                    bottom: 13px;
-                    &:hover{
+
+                        &:hover{
                         background-color: $btn-darkcolor;
                         color: $light-color;
                         cursor: pointer;
