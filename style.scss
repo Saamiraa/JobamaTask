@@ -1,12 +1,11 @@
 
 
 // varibles
-$regular-font-family:"main";
-$extra-bold-font-family:"bold";
 $light-color: #EAE6E6;
 $darkBlue-color: #20307E;
 $black-color: #000103;
 $btn-color: #febd69;
+$btn-darkcolor: #f3a847;
 $search-color: #232f3e;
 $body-color: #FFFFFF;
 $card-color: #f2f2f2;
@@ -40,7 +39,6 @@ ul {
 }
 a {
     text-decoration: none;
-    font-family: extra-bold-font-family;
 }
 p{
     margin: 0;
@@ -85,7 +83,7 @@ p{
             }
             p {
                 font-size: 20px;
-                color: white;
+                color: $body-color;
                 font-weight: bold;
             }
         }
@@ -112,7 +110,7 @@ p{
                 width: 70%;
                 padding-left: 40px;
                 font-size: 16px;
-                background-color: #fff;
+                background-color: $body-color;
                 font-weight: 400;
                 border-radius: 5px;
                 transition: all .24s ease-in-out;
@@ -137,7 +135,7 @@ p{
                 width: 70%;
                 padding-left: 40px;
                 font-size: 16px;
-                background-color: #fff;
+                background-color: $body-color;
                 font-weight: 400;
                 border-radius: 5px;
                 transition: all .24s ease-in-out;
@@ -241,7 +239,7 @@ p{
                 width: 50px;
                 min-height: auto;
                 border-radius: 5px;
-                background-color: black;
+                background-color: $black-color;
             }
         }
         .container-Card__header{
@@ -271,14 +269,14 @@ p{
             button{
                 width: 140px;
                 height: 40px;
-                background-color: #febd69;
+                background-color: $btn-color;
                 border: none;
                 border-radius: 10px;
                 position: absolute;
                 left: 36px;
                 bottom: 13px;
                 &:hover{
-                    background-color: #f3a847;
+                    background-color: $btn-darkcolor;
                     color: $light-color;
                     cursor: pointer;
                     transition: all 0.5s;
@@ -358,6 +356,19 @@ p{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+//responsive
+
 @media screen and (max-width:501px) {
 
     #header {
@@ -398,7 +409,7 @@ p{
                 }
                 p {
                     font-size: 14px;
-                    color: white;
+                    color: $body-color;
                 }
             }
         }
@@ -425,7 +436,7 @@ p{
                     height: 47px;
                     padding-left: 21px;
                     font-size: 16px;
-                    background-color: #fff;
+                    background-color: $body-color;
                     font-weight: 400;
                     border-radius: 5px;
                     transition: all .24s ease-in-out;
@@ -450,7 +461,7 @@ p{
                     height: 47px;
                     padding-left: 21px;
                     font-size: 16px;
-                    background-color: #fff;
+                    background-color: $body-color;
                     font-weight: 400;
                     border-radius: 5px;
                     transition: all .24s ease-in-out;
@@ -509,7 +520,7 @@ p{
             margin-left: 0;
             padding: 0 10px;
             h1{
-                color: #000103;
+                color: $black-color;
                 font-size: 20px;
                 line-height: 23px;
             }
@@ -520,7 +531,7 @@ p{
     // container
     .container{
         width: 100%;
-        background-color: #232f3e;
+        background-color: $search-color;
         position: relative;
         margin: 0 auto;
     
@@ -541,7 +552,7 @@ p{
             line-height: 28px;
             padding-left: 20px;
             padding-bottom: 30px;
-            background-color: #f2f2f2;
+            background-color: $body-color;
             border-radius: 5px;
         }
     
@@ -556,7 +567,7 @@ p{
                     width: 50px;
                     min-height: auto;
                     border-radius: 5px;
-                    background-color: black;
+                    background-color:  $black-color;
                 }
             }
             .container-Card__header{
@@ -586,14 +597,14 @@ p{
                 button{
                     width: 81px;
                     height: 34px;
-                    background-color: #febd69;
+                    background-color: $btn-color;
                     border: none;
                     border-radius: 10px;
                     position: absolute;
                     left: 47px;
                     bottom: 13px;
                     &:hover{
-                        background-color: #f3a847;
+                        background-color: $btn-darkcolor;
                         color: $light-color;
                         cursor: pointer;
                         transition: all 0.5s;
