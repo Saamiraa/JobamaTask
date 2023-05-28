@@ -4,6 +4,7 @@ const locationInput = document.querySelector(".locationInput");
 const container = document.querySelector(".container");
 const containerBox = document.querySelector(".containerBox");
 const Lodingbtn = document.querySelector("#Lodingbtn");
+const banner = document.querySelector(".banner");
 
 
 
@@ -36,6 +37,7 @@ form.addEventListener("submit", (event) => {
       delete data[key];
     }
   });
+
   queryString = new URLSearchParams(data).toString();
 
   if (Object.keys(data).length === 0) {
@@ -58,6 +60,16 @@ async function showitems(isloadmore) {
   });
   if (jsonData.result.items.length > 0) {
     page++;
+  }
+  else{
+    container.remove()
+
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "error";
+    errorDiv.innerHTML = `
+      <p>No Jobs found</p>
+    `
+    banner.appendChild(errorDiv)
   }
 }
 
