@@ -8,6 +8,7 @@ const Lodingbtn = document.querySelector("#Lodingbtn");
 const data = {};
 let queryString = null;
 let mainUrl = "https://jabama-devjobs-api.vercel.app/api/v1/jobs";
+queryString = new URLSearchParams(data).toString();
 
 function checkQuery(x) {
   if (x) {
@@ -33,7 +34,7 @@ form.addEventListener("submit", (event) => {
     }
   });
 
-  queryString = new URLSearchParams(data).toString();
+
 
   if (Object.keys(data).length === 0) {
     window.history.pushState({ data }, "", "/");
@@ -56,7 +57,6 @@ async function showitems(isloadmore) {
   if (jsonData.result.items.length > 0) {
     page++;
   }
-  console.log(jsonData);
 }
 
 let page = 1;

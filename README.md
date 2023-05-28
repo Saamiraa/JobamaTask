@@ -5,4 +5,4 @@ jobamatask is webpage for finding a job.
 install sass from website "https://sass-lang.com/install"
 
 ## Contributing
-Pull the project github and use if you use vsCode use "go live" for rendering the webpage.
+Pull the project github and if you use vsCode use "go live" for rendering the webpage.
